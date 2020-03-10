@@ -1,5 +1,6 @@
-const { apiKey } = require('./config')
 const axios = require('axios')
+require('dotenv').config()
+const apiKey = process.env.API_KEY
 
 const fetchWeather = async () => {
   const latLong = '40.704,-74.009'
