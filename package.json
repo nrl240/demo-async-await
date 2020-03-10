@@ -1,0 +1,28 @@
+{
+  "name": "demo-async-await",
+  "version": "1.0.0",
+  "description": "Async/Await live code demo",
+  "main": "gems.js",
+  "scripts": {
+    "while": "nodemon while.js",
+    "readFile": "nodemon readFile.js",
+    "weather": "nodemon weather.js",
+    "gems": "nodemon gems.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrl240/demo-async-await.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrl240/demo-async-await/issues"
+  },
+  "homepage": "https://github.com/nrl240/demo-async-await#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
