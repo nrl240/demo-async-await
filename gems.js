@@ -11,9 +11,9 @@ function getLuckyGem(birthMonth) {
 
 let myGem
 try { // statements to try
-  myGem = getLuckyGem(13); // function could throw exception
+  myGem = getLuckyGem(5); // function could throw exception
 }
-catch (error) {
+catch(error) {
   myGem = 'unknown';
   console.error(error.message);
 }
