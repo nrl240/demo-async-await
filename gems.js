@@ -1,6 +1,18 @@
 function getLuckyGem(birthMonth) {
   const gems = [
-    'offset', 'Garnet', 'Amethyst', 'Aquamarine', 'Diamond', 'Emerald', 'Pearl', 'Ruby', 'Peridot', 'Sapphire', 'Opal', 'Topaz', 'Turquoise'
+    'offset',
+    'Garnet',
+    'Amethyst',
+    'Aquamarine',
+    'Diamond',
+    'Emerald',
+    'Pearl',
+    'Ruby',
+    'Peridot',
+    'Sapphire',
+    'Opal',
+    'Topaz',
+    'Turquoise'
   ];
   if (gems[birthMonth]) {
     return gems[birthMonth];
@@ -9,13 +21,13 @@ function getLuckyGem(birthMonth) {
   }
 }
 
-let myGem
-try { // statements to try
+let myGem;
+try {
+  // statements to try
   myGem = getLuckyGem(13); // function could throw exception
-}
-catch (error) {
+} catch (error) {
   myGem = 'unknown';
   console.error(error.message);
 }
 
-console.log(`My Gem is ${myGem}.`)
+console.log(`My Gem is ${myGem}.`);
