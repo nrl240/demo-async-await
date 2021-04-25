@@ -1,4 +1,5 @@
 const axios = require('axios'); // Promise based HTTP client for the browser and node.js
+const chalk = require('chalk');
 
 /*
 
@@ -25,7 +26,7 @@ const fetchCountriesUsingAsyncAwait = async (languageCode) => {
   const responseData = response.data;
 
   responseData.forEach((country) => {
-    console.log('INSIDE: country.name >>', country.name);
+    console.log(chalk.magenta('INSIDE: country.name >>', country.name));
   });
 };
 
