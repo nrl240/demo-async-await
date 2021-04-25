@@ -9,6 +9,8 @@ Take a look at the documentation here >> http://restcountries.eu/
 
 We'll be using their "Language" endpoint, which given an ISO 639-1 language code, will return all of the countries that list it as a designated language.
 
+Endpoint >> `https://restcountries.eu/rest/v2/lang/${languageCode}`
+
 */
 
 // Using `async`/`await`:
