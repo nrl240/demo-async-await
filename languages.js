@@ -1,4 +1,4 @@
-const axios = require('axios') // Promise based HTTP client for the browser and node.js
+const axios = require('axios'); // Promise based HTTP client for the browser and node.js
 
 // Instead of using the Dark Sky API, which requires that you make an API key, I found another third-party API that doesn't!
 // We're going to work with this API called "REST Countries"
@@ -8,19 +8,19 @@ const axios = require('axios') // Promise based HTTP client for the browser and 
 
 // Using `async`/`await`:
 const fetchCountriesUsingAsyncAwait = async (languageCode) => {
-  const apiEndpoint = `https://restcountries.eu/rest/v2/lang/${languageCode}`
+  const apiEndpoint = `https://restcountries.eu/rest/v2/lang/${languageCode}`;
 
-  console.log('INSIDE: About to make an HTTP request...')
+  console.log('INSIDE: About to make an HTTP request...');
 
-  const response = await axios.get(apiEndpoint) // `axios.get` returns a Promise
+  const response = await axios.get(apiEndpoint); // `axios.get` returns a Promise
 
   // When using `axios`, in order to access the body of the response, we will "dot" off of the `response` object to access the `data` property.
-  const responseData = response.data
+  const responseData = response.data;
 
-  responseData.forEach(country => {
-    console.log('INSIDE: country.name >>', country.name)
-  })
-}
+  responseData.forEach((country) => {
+    console.log('INSIDE: country.name >>', country.name);
+  });
+};
 
 // Using Promise chaining (`.then` & `.catch`):
 // const fetchCountriesUsingPromiseChaining = (languageCode) => {
@@ -40,11 +40,14 @@ const fetchCountriesUsingAsyncAwait = async (languageCode) => {
 //   })
 // }
 
-console.log('OUTSIDE: About to run `fetchCountries`...')
+console.log('OUTSIDE: About to run `fetchCountries`...');
 
-const spanishSpeakingCountriesAA = fetchCountriesUsingAsyncAwait('es')
+const spanishSpeakingCountriesAA = fetchCountriesUsingAsyncAwait('es');
 
-console.log('OUTSIDE: Spanish speaking countries >>', spanishSpeakingCountriesAA)
+console.log(
+  'OUTSIDE: Spanish speaking countries >>',
+  spanishSpeakingCountriesAA
+);
 
 // const spanishSpeakingCountriesPC = fetchCountriesUsingPromiseChaining('es')
 
