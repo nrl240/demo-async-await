@@ -1,10 +1,15 @@
 const axios = require('axios'); // Promise based HTTP client for the browser and node.js
 
-// Instead of using the Dark Sky API, which requires that you make an API key, I found another third-party API that doesn't!
-// We're going to work with this API called "REST Countries"
-// Take a look at the documentation here >> http://restcountries.eu/
+/*
 
-// We'll be using their "Language" endpoint, which given an ISO 639-1 language code, will return all of the countries that list it as a designated language.
+Async Operation: API requests
+
+We're going to work with an API called "REST Countries"
+Take a look at the documentation here >> http://restcountries.eu/
+
+We'll be using their "Language" endpoint, which given an ISO 639-1 language code, will return all of the countries that list it as a designated language.
+
+*/
 
 // Using `async`/`await`:
 const fetchCountriesUsingAsyncAwait = async (languageCode) => {
